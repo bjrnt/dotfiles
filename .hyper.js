@@ -85,7 +85,9 @@ module.exports = {
     'hyper-snazzy',
     'hypercwd',
     'hyperterm-tab-icons',
-    'hyperlinks'
+    'hyperlinks',
+    'hyperterm-paste',
+    'hyperterm-tabs'
   ],
 
   // in development, you can create a directory under
