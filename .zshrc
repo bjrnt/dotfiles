@@ -5,7 +5,6 @@ antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle autojump
-antigen bundle tarruda/zsh-autosuggestions
 
 # Syntax highlighting bundle
 antigen bundle zsh-users/zsh-syntax-highlighting
