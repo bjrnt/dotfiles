@@ -67,12 +67,20 @@ module.exports = {
     bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
-    copyOnSelect: false
+    copyOnSelect: false,
 
     // URL to custom bell
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+
+    visor: { 
+      hotkey: 'CommandOrControl+`', 
+      position: 'right', 
+      height: '100%', 
+      width: '40%'
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -87,7 +95,8 @@ module.exports = {
     'hyperterm-tab-icons',
     'hyperlinks',
     'hyperterm-paste',
-    'hyperterm-tabs'
+    'hyperterm-tabs',
+    'hyperterm-visor'
   ],
 
   // in development, you can create a directory under
