@@ -1,0 +1,16 @@
+[user]
+	name = Björn Tegelund
+	email = bjorn@tumblbug.com
+[core]
+	editor = vim
+[filter "lfs"]
+	smudge = git-lfs smudge %f
+	required = true
+	clean = git-lfs clean %f
+[push]
+	default = current
+[alias]
+	commend = commit --amend --no-edit
+	shorty = status --short --branch
+	ds = diff --staged
+	s = status --short --branch
