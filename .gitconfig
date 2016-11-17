@@ -7,10 +7,16 @@
 	smudge = git-lfs smudge %f
 	required = true
 	clean = git-lfs clean %f
+[pull]
+	default = current
 [push]
 	default = current
 [alias]
 	commend = commit --amend --no-edit
-	shorty = status --short --branch
 	ds = diff --staged
 	s = status --short --branch
+        c = commit
+	a = add
+	co = checkout
+	com = checkout master
+	b = branch
