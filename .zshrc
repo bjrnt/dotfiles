@@ -1,5 +1,16 @@
 source ~/antigen/antigen.zsh
 
+export EDITOR=atom
+export PATH="$PATH:$HOME/.yarn/bin"
+
+# Android Dev
+# export ANDROID_HOME=~/Library/Android/sdk
+# export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
+# export ANDROID_NDK=~/Library/Android/android-ndk-r10e
+
+# OCaml Dev
+# eval `opam config env`
+
 # Load the oh-my-zsh library
 antigen use oh-my-zsh
 
