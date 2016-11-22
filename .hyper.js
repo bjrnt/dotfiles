@@ -94,7 +94,6 @@ module.exports = {
     'hypercwd',
     'hyperterm-tab-icons',
     'hyperlinks',
-    'hyperterm-paste',
     'hyperterm-tabs',
     'hyperterm-visor'
   ],

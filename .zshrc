@@ -1,7 +1,7 @@
 source ~/antigen/antigen.zsh
 
 export EDITOR=atom
-export PATH="$PATH:$HOME/.yarn/bin"
+export PATH="$PATH:$HOME/.nvm/versions/node/v6.9.1/bin"
 
 # Android Dev
 # export ANDROID_HOME=~/Library/Android/sdk
@@ -31,3 +31,13 @@ antigen theme pure
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 antigen apply
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/bjorn/Downloads/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/bjorn/Downloads/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/bjorn/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/bjorn/Downloads/google-cloud-sdk/completion.zsh.inc'
+fi
