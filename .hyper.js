@@ -90,7 +90,8 @@ module.exports = {
     'hyperterm-tab-icons',
     'hyperlinks',
     'hyperterm-tabs',
-    'hyperterm-visor'
+    'hyperterm-visor',
+    'hyper-statusline'
   ],
 
   // in development, you can create a directory under
