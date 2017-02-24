@@ -34,10 +34,6 @@ if [ -f /Users/bjorn/tools/google-cloud-sdk/path.zsh.inc ]; then
   source '/Users/bjorn/tools/google-cloud-sdk/path.zsh.inc'
 fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f /Users/bjorn/tools/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/bjorn/tools/google-cloud-sdk/completion.zsh.inc'
-fi
-
 alias r='npm run'
 alias c='clear'
+alias vim='nvim'
