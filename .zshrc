@@ -3,16 +3,13 @@ source ~/antigen/antigen.zsh
 export EDITOR=atom
 export PATH="$PATH:$HOME/.nvm/versions/node/v6.9.1/bin"
 
-# Haskell binaries
-export PATH="$PATH:/Users/bjorn/.local/bin"
+# Rust dev
+export PATH="$HOME/.cargo/bin:$PATH"
+export RUST_SRC_PATH="/Users/bjorn/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 
-# Android Dev
-# export ANDROID_HOME=~/Library/Android/sdk
-# export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-# export ANDROID_NDK=~/Library/Android/android-ndk-r10e
-
-# OCaml Dev
-# eval `opam config env`
+# Python + Anaconda
+# added by Miniconda3 4.2.12 installer
+export PATH="/Users/bjorn/miniconda3/bin:$PATH"
 
 # Load the oh-my-zsh library
 antigen use oh-my-zsh
@@ -41,3 +38,6 @@ fi
 if [ -f /Users/bjorn/tools/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/bjorn/tools/google-cloud-sdk/completion.zsh.inc'
 fi
+
+alias r='npm run'
+alias c='clear'
