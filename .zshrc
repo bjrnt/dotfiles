@@ -34,6 +34,8 @@ if [ -f /Users/bjorn/tools/google-cloud-sdk/path.zsh.inc ]; then
   source '/Users/bjorn/tools/google-cloud-sdk/path.zsh.inc'
 fi
 
+export PATH="$HOME/.yarn/bin:$PATH"
+
 alias r='npm run'
 alias c='clear'
 alias vim='nvim'

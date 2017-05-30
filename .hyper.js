@@ -74,10 +74,10 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
 
-    visor: { 
-      hotkey: 'CommandOrControl+`', 
-      position: 'right', 
-      height: '100%', 
+    visor: {
+      hotkey: 'CommandOrControl+`',
+      position: 'right',
+      height: '100%',
       width: '40%'
     }
   },

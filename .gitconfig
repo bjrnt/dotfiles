@@ -19,4 +19,5 @@
 	a = add
 	co = checkout
 	com = checkout master
-	b = branch
+    b = branch
+    recent = for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
