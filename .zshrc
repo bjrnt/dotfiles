@@ -1,7 +1,7 @@
 source ~/antigen/antigen.zsh
 
-export EDITOR=atom
-export PATH="$PATH:$HOME/.nvm/versions/node/v6.9.1/bin"
+export EDITOR=code
+export PATH="$PATH:$HOME/.nvm/versions/node/v6.11.1/bin"
 
 # Rust dev
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -37,5 +37,9 @@ fi
 export PATH="$HOME/.yarn/bin:$PATH"
 
 alias r='npm run'
+alias d='npm run dev'
 alias c='clear'
 alias vim='nvim'
+
+# OCaml/Reason dev
+. /Users/bjorn/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
