@@ -1,8 +1,8 @@
+let g:python_host_prog = '/usr/local/bin/python'
 language en_US
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-sensible'
-Plug 'vim-syntastic/syntastic'
 Plug 'Valloric/YouCompleteMe'
 Plug 'reasonml-editor/vim-reason'
 Plug 'chriskempson/base16-vim'
