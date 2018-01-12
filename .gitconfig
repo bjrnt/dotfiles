@@ -1,23 +1,32 @@
 [user]
 	name = Björn Tegelund
 	email = bjorn@tumblbug.com
+	signingKey = 1D18D575ADAAD50BEF78B511CC68A8A0FE9EA5B7
 [core]
 	editor = vim
 [filter "lfs"]
-	smudge = git-lfs smudge %f
+	smudge = git-lfs smudge -- %f
 	required = true
-	clean = git-lfs clean %f
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
 [pull]
 	default = current
 [push]
 	default = current
 [alias]
-	commend = commit --amend --no-edit
+	ca = commit --amend --no-edit
 	ds = diff --staged
 	s = status --short --branch
         c = commit
 	a = add
 	co = checkout
 	com = checkout master
-    b = branch
-    recent = for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
+	new = checkout -b
+	rh = reset --hard
+	b = branch
+	recent = for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
+	la = "!git config -l | grep alias | cut -c 7-"
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

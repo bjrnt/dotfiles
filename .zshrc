@@ -3,8 +3,7 @@ source ~/antigen/antigen.zsh
 export EDITOR=code
 
 # Rust dev
-# export PATH="$HOME/.cargo/bin:$PATH"
-# export RUST_SRC_PATH="/Users/bjorn/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Python + Anaconda
 # added by Miniconda3 4.2.12 installer
@@ -18,8 +17,16 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Lazy nvm loading
 export NVM_LAZY_LOAD=true
-export NVM_AUTO_USE=false
+export NVM_AUTO_USE=true
 antigen bundle lukechilds/zsh-nvm
+
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
 
 antigen theme pure
 
@@ -35,9 +42,10 @@ antigen apply
 
 # export PATH="$HOME/.yarn/bin:$PATH"
 
-alias r='npm run'
-alias t='npm run test'
-alias d='npm run dev'
+alias r='yarn run'
+alias t='yarn run test'
+alias d='yarn run dev'
+alias stb='yarn run storybook'
 alias c='clear'
 alias vim='nvim'
 alias rr='git reset --hard && git checkout master && git pull'
@@ -48,6 +56,3 @@ pr() {
 # OCaml/Reason dev
 . /Users/bjorn/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
-if [ -f /Users/bjorn/tools/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/bjorn/tools/google-cloud-sdk/path.zsh.inc'
-fi
