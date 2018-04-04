@@ -26,6 +26,8 @@
 	b = branch
 	recent = for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
 	la = "!git config -l | grep alias | cut -c 7-"
+	sco = !sh -c \"git branch -a | grep -v remotes | grep $1 | xargs git checkout\"
+	cos = !sh -c \"git sco SPRINT\"
 [commit]
 	gpgsign = true
 [gpg]

@@ -4,13 +4,16 @@ export EDITOR=code
 # Rust dev
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# The following lines were added by compinstall
+# https://carlosbecker.com/posts/speeding-up-zsh/
 zstyle ':completion:*' completer _expand _complete _ignored
 zstyle :compinstall filename '/Users/bjorn/.zshrc'
 
 autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+	compinit
+else
+	compinit -C
+fi
 
 # Python + Anaconda
 # added by Miniconda3 4.2.12 installer
@@ -48,18 +51,18 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # export PATH="$HOME/.yarn/bin:$PATH"
 
 alias r='yarn run'
-alias t='yarn run test'
+alias t='yarn run test -w 2'
+alias tw='yarn run test:watch -w 2'
 alias d='yarn run dev'
-alias stb='yarn run storybook'
+alias s='yarn run storybook'
 alias c='clear'
 alias vim='nvim'
 alias rr='git reset --hard && git checkout master && git pull'
 pr() {
-  open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's/\.git//')/compare/$(git rev-parse --abbrev-ref HEAD)
+	open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's/\.git//')/compare/$(git branch -a | grep -v remotes | grep SPRINT | awk '{$1=$1};1')...$(git rev-parse --abbrev-ref HEAD)
 }
 
 # OCaml/Reason dev
 . /Users/bjorn/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
-
-
+eval $(thefuck --alias)
