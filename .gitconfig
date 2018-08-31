@@ -1,6 +1,6 @@
 [user]
 	name = Björn Tegelund
-	email = bjorn@tumblbug.com
+	email = b.tegelund@gmail.com
 	signingKey = 1D18D575ADAAD50BEF78B511CC68A8A0FE9EA5B7
 [core]
 	editor = vim
@@ -29,6 +29,6 @@
 	sco = !sh -c \"git branch -a | grep -v remotes | grep $1 | xargs git checkout\"
 	cos = !sh -c \"git sco SPRINT\"
 [commit]
-	gpgsign = true
+	gpgsign = false 
 [gpg]
 	program = gpg
