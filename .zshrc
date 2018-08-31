@@ -17,10 +17,6 @@ else
 	compinit -C
 fi
 
-# Python + Anaconda
-# added by Miniconda3 4.2.12 installer
-# export PATH="/Users/bjorn/miniconda3/bin:$PATH"
-
 # Antibody installation https://github.com/getantibody/antibody/tree/master/docs
 source ~/.zsh_plugins.sh
 
@@ -31,11 +27,7 @@ export NVM_DIR="$HOME/.nvm"
 # Add config git alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# The next line updates PATH for the Google Cloud SDK.
-# if [ -f /Users/bjorn/tools/google-cloud-sdk/path.zsh.inc ]; then
-#  source '/Users/bjorn/tools/google-cloud-sdk/path.zsh.inc'
-# fi
-
+# My Aliases
 alias r='yarn run'
 alias t='yarn run test -w 2'
 alias tw='yarn run test:watch -w 2'
@@ -49,3 +41,13 @@ pr() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+SPACESHIP_PROMPT_ORDER=(
+   dir
+   exec_time
+   git
+   line_sep
+   jobs
+   exit_code
+   char
+)
