@@ -6,6 +6,10 @@ export PATH="/usr/local/bin:$PATH"
 # Rust dev
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Golang dev
+export PATH="/usr/local/go/bin:$PATH"
+export GOPATH="$HOME/go"
+
 # https://carlosbecker.com/posts/speeding-up-zsh/
 zstyle ':completion:*' completer _expand _complete _ignored
 zstyle :compinstall filename '/Users/bjorn/.zshrc'
@@ -39,6 +43,7 @@ alias rr='git reset --hard && git checkout master && git pull'
 pr() {
 	open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's/\.git//')/compare/$(git branch -a | grep -v remotes | grep SPRINT | awk '{$1=$1};1')...$(git rev-parse --abbrev-ref HEAD)
 }
+alias n='nvm use default'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -51,3 +56,6 @@ SPACESHIP_PROMPT_ORDER=(
    exit_code
    char
 )
+
+# Autojump, https://github.com/wting/autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
