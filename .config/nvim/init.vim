@@ -3,10 +3,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'roxma/nvim-completion-manager'
-Plug 'SirVer/ultisnips'
 Plug 'sgur/vim-editorconfig'
-Plug 'honza/vim-snippets'
 Plug 'autozimu/LanguageClient-neovim', {
   \ 'branch': 'next',
   \ 'do': 'bash.install.sh'
