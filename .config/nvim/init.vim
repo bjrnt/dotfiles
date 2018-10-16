@@ -17,6 +17,9 @@ endif
 
 call plug#end()
 
+" behavior
+set clipboard+=unnamedplus
+
 " look and feel
 set cmdheight=2
 set t_Co=256
