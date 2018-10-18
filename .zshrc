@@ -34,8 +34,8 @@ export PATH="/usr/local/bin:$PATH"
 # Rust dev
 export PATH="$HOME/.cargo/bin:$PATH"
 # Golang dev
-export PATH="/usr/local/go/bin:$PATH"
 export GOPATH="$HOME/go"
+export PATH="/usr/local/go/bin/:$GOPATH/bin:$PATH"
 
 ###########
 # PLUGINS #
