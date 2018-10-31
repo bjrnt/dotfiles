@@ -1,3 +1,5 @@
+language en_US
+
 call plug#begin()
 Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
