@@ -3,6 +3,8 @@
 ##################
 
 export EDITOR=code
+export DISABLE_AUTO_UPDATE=true
+export LC_ALL=en_US
 
 ###############
 # ZSH Options #
@@ -24,6 +26,8 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
 	compinit -C
 fi
+
+ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 
 ########
 # PATH #
@@ -52,6 +56,7 @@ source ~/.zsh_plugins.sh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # My Aliases
+alias lg='lazygit'
 alias r='yarn run'
 alias t='yarn run test -w 2'
 alias tw='yarn run test:watch -w 2'
