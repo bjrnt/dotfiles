@@ -69,7 +69,6 @@ pr() {
 	open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's/\.git//')/compare/$(git branch -a | grep -v remotes | grep SPRINT | awk '{$1=$1};1')...$(git rev-parse --abbrev-ref HEAD)
 }
 alias n='nvm use default'
-
 ###############
 # LOOK & FEEL #
 ###############
@@ -97,3 +96,21 @@ export NVM_DIR="$HOME/.nvm"
 
 # Autojump, https://github.com/wting/autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# Docker-based Golang development
+alias god='docker run --net=party -p 8080:80 --rm=true -it -v `pwd`:/go/src/app -w /go/src/app golang go "$@"'
+function gvt() {
+  echo "== gvt" "$@" "=="
+  if [ $1 == "fetch" ]; then
+    BASE="vendor/"
+    if [ -d "$BASE$2" ]; then
+      return
+    fi
+  fi
+  docker run --dns=8.8.8.8 \
+             --dns=8.8.4.4 \
+             --rm=true -i \
+             -v $(pwd):/go/src \
+             justincormack/gvt "$@"
+}
+
