@@ -58,7 +58,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # My Aliases
 alias lg='lazygit'
 alias r='yarn run'
-alias t='yarn run test -w 2'
+alias t='yarn run test'
 alias tw='yarn run test:watch'
 alias d='yarn run dev'
 alias s='yarn run storybook'
@@ -66,9 +66,10 @@ alias c='clear'
 alias vim='nvim'
 alias rr='git reset --hard && git checkout master && git pull'
 pr() {
-	open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's/\.git//')/compare/$(git branch -a | grep -v remotes | grep SPRINT | awk '{$1=$1};1')...$(git rev-parse --abbrev-ref HEAD)
+	PARENT_BRANCH=$(git show-branch | grep -F '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed 's/.*\[\(.*\)\].*/\1/' | sed 's/[\^~].*//')
+	open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's/\.git//')/compare/$PARENT_BRANCH...$(git rev-parse --abbrev-ref HEAD)
 }
-alias n='nvm use default'
+alias n='nvm use'
 ###############
 # LOOK & FEEL #
 ###############
