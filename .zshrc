@@ -35,8 +35,6 @@ ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SL
 
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
-# Rust dev
-export PATH="$HOME/.cargo/bin:$PATH"
 # Golang dev
 export GOPATH="$HOME/go"
 export PATH="/usr/local/go/bin/:$GOPATH/bin:$PATH"
@@ -55,21 +53,29 @@ source ~/.zsh_plugins.sh
 # Add config git alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# My Aliases
+# General 
+alias c='clear'
+alias vim='nvim'
 alias lg='lazygit'
+
+# JavaScript Dev
+alias n='nvm use'
 alias r='yarn run'
 alias t='yarn run test'
 alias tw='yarn run test:watch'
 alias d='yarn run dev'
-alias s='yarn run storybook'
-alias c='clear'
-alias vim='nvim'
-alias rr='git reset --hard && git checkout master && git pull'
+
+# Docker
+alias dc=docker-compose
+alias stopconts='docker ps -aq | xargs -n 1 docker stop'
+alias delconts='docker ps -aq | xargs -n 1 docker rm -v'
+
+# Git
 pr() {
 	PARENT_BRANCH=$(git show-branch | grep -F '*' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -n1 | sed 's/.*\[\(.*\)\].*/\1/' | sed 's/[\^~].*//')
 	open $(git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's/\.git//')/compare/$PARENT_BRANCH...$(git rev-parse --abbrev-ref HEAD)
 }
-alias n='nvm use'
+
 ###############
 # LOOK & FEEL #
 ###############
@@ -99,6 +105,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Docker-based Golang development
+# TODO: iterate on this
 alias god='docker run --net=party -p 8080:80 --rm=true -it -v `pwd`:/go/src/app -w /go/src/app golang go "$@"'
 function gvt() {
   echo "== gvt" "$@" "=="

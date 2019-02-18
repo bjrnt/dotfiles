@@ -17,17 +17,20 @@
 	ca = commit --amend --no-edit
 	ds = diff --staged
 	s = status --short --branch
-        c = commit
+  c = commit
 	a = add
 	co = checkout
 	com = checkout master
+	cod = checkout develop 
 	new = checkout -b
 	rh = reset --hard
 	b = branch
+  # Lists branches by most recently commmited to
 	recent = for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
-	la = "!git config -l | grep alias | cut -c 7-"
-	sco = !sh -c \"git branch -a | grep -v remotes | grep $1 | xargs git checkout\"
-	cos = !sh -c \"git sco SPRINT\"
+  # List aliases
+	la = !git config -l | grep alias | cut -c 7-
+  # Remove local branches that have been merged into master of develop
+  cleanup = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
 [commit]
 	gpgsign = false 
 [gpg]
