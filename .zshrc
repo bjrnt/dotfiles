@@ -69,6 +69,7 @@ alias d='yarn run dev'
 alias dc=docker-compose
 alias stopconts='docker ps -aq | xargs -n 1 docker stop'
 alias delconts='docker ps -aq | xargs -n 1 docker rm -v'
+alias die='stopconts; delconts'
 
 # Git
 pr() {
