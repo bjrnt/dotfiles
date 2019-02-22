@@ -3,7 +3,7 @@
 	email = b.tegelund@gmail.com
 	signingKey = 1D18D575ADAAD50BEF78B511CC68A8A0FE9EA5B7
 [core]
-	editor = vim
+	editor = code --wait
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	required = true
@@ -35,3 +35,9 @@
 	gpgsign = false 
 [gpg]
 	program = gpg
+[diff]
+	tool = code
+[difftool]
+  prompt = false
+[difftool "code"]
+	cmd = code --wait --diff $LOCAL $REMOTE
