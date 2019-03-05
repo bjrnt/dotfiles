@@ -14,7 +14,7 @@ export LC_ALL=en_US
 # - Appends every command to the history file once it is executed
 setopt inc_append_history
 # - Reloads the history whenever you use it
-setopt share_history
+# setopt share_history
 
 # https://carlosbecker.com/posts/speeding-up-zsh/
 zstyle ':completion:*' completer _expand _complete _ignored
