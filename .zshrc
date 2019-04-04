@@ -58,12 +58,21 @@ alias c='clear'
 alias vim='nvim'
 alias lg='lazygit'
 
-# JavaScript Dev
+# Dev Shortcuts 
+function makeOrYarn {
+  if [ -f $PWD/Makefile ]; then
+    make $1
+  else
+    yarn run $2
+  fi
+}
+
 alias n='nvm use'
 alias r='yarn run'
-alias t='yarn run test'
 alias tw='yarn run test:watch'
-alias d='yarn run dev'
+
+alias d='makeOrYarn "watch" "dev"'
+alias t='makeOrYarn "test" "test"'
 
 # Docker
 alias dc=docker-compose
