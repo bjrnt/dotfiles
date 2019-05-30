@@ -71,6 +71,7 @@ alias tw='yarn run test:watch'
 
 alias d='makeOrYarn "watch" "dev"'
 alias t='makeOrYarn "test" "test"'
+alias ti='makeOrYarn "integration" "test:integration"'
 
 # Docker
 alias dc=docker-compose
