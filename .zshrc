@@ -1,3 +1,13 @@
+#########
+# PATH #
+########
+
+# Homebrew
+export PATH="/usr/local/bin:$PATH"
+# Golang dev
+export GOPATH="$HOME/go"
+export PATH="/usr/local/go/bin/:$GOPATH/bin:$PATH"
+
 ##################
 # GLOBAL OPTIONS #
 ##################
@@ -26,16 +36,6 @@ else
 fi
 
 ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-
-########
-# PATH #
-########
-
-# Homebrew
-export PATH="/usr/local/bin:$PATH"
-# Golang dev
-export GOPATH="$HOME/go"
-export PATH="/usr/local/go/bin/:$GOPATH/bin:$PATH"
 
 ###########
 # PLUGINS #
