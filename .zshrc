@@ -7,6 +7,8 @@ export PATH="/usr/local/bin:$PATH"
 # Golang dev
 export GOPATH="$HOME/go"
 export PATH="/usr/local/go/bin/:$GOPATH/bin:$PATH"
+# Python
+export PATH="/Users/bjorn/Library/Python/2.7/bin:$PATH"
 
 ##################
 # GLOBAL OPTIONS #
@@ -75,7 +77,7 @@ alias ti='makeOrYarn "integration" "test:integration"'
 
 # Docker
 alias dc=docker-compose
-alias stopconts='docker ps -aq | xargs -n 1 docker stop'
+alias stopconts='docker ps -aq | xargs -n 1 docker stop -t 0'
 alias delconts='docker ps -aq | xargs -n 1 docker rm -v'
 alias die='stopconts; delconts'
 
