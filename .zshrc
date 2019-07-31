@@ -57,6 +57,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias c='clear'
 alias vim='nvim'
 alias lg='lazygit'
+alias dns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'
 
 # Dev Shortcuts 
 function makeOrYarn {
