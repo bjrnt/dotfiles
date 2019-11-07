@@ -737,6 +737,19 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: fantastical\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "m"
           },
           "to" : [ {
@@ -811,21 +824,6 @@
             "name" : "launch-mode",
             "value" : 1,
             "type" : "variable_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left-Shift to launch Alfred when alone",
-        "manipulators" : [ {
-          "to_if_alone" : [ {
-            "key_code" : "f",
-            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
-          } ],
-          "from" : {
-            "key_code" : "left_shift"
-          },
-          "to" : [ {
-            "key_code" : "left_shift"
           } ],
           "type" : "basic"
         } ]

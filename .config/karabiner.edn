@@ -47,7 +47,7 @@
                  [:u :page_up] ;; Navigation
                  [:v :!!v]
                  [:w :!Oright_arrow] ;; Navigation
-                 [:x :!!x]
+                 [:x :!!x] ;; OSX Global Lock
                  [:y :!!y]
                  [:z :!!z]
                  [:1 :!!1]
@@ -71,12 +71,10 @@
                  [:d [:km "open: recent downloads"]]
                  [:e [:km "open: paw"]]
                  [:k [:km "open: kakaotalk"]]
+                 [:l [:km "open: fantastical"]]
                  [:m [:km "open: spotify"]]
                  [:s [:km "open: spark"]]
                  [:t [:km "open: terminal"]]
                  [:v [:km "open: vscode"]]
                  [:w [:km "open: things"]]
-                 [:q [:km "open: slack"]]]}
-
-        {:des "Left-Shift to launch Alfred when alone"
-         :rules [[:left_shift :left_shift nil {:alone :!!f}]]}]}
+                 [:q [:km "open: slack"]]]}]}
