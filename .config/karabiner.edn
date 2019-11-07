@@ -68,6 +68,7 @@
          :rules [:launch-mode
                  [:b [:km "open: bear"]]
                  [:c [:km "open: chrome"]]
+                 [:d [:km "open: recent downloads"]]
                  [:e [:km "open: paw"]]
                  [:k [:km "open: kakaotalk"]]
                  [:m [:km "open: spotify"]]

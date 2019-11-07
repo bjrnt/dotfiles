@@ -698,6 +698,19 @@
           "type" : "basic"
         }, {
           "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: recent downloads\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
             "key_code" : "e"
           },
           "to" : [ {
