@@ -66,6 +66,7 @@
 
         {:des "Launch mode"
          :rules [:launch-mode
+                 [:a [:km "open: applications"]]
                  [:b [:km "open: bear"]]
                  [:c [:km "open: chrome"]]
                  [:d [:km "open: recent downloads"]]
