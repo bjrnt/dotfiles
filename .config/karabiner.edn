@@ -14,7 +14,7 @@
              ;; e.g. [:r [:km "edit: Web Searches"]]
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"}
  ; the default value is 250
- :simlayer-threshold 250
+ :simlayer-threshold 50
  :main [{:des "Hyper Mode"
          :rules [:hyper-mode
                  [:open_bracket :!!open_bracket]
