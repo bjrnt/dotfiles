@@ -68,7 +68,6 @@ function makeOrYarn {
   fi
 }
 
-alias n='nvm use'
 alias r='yarn run'
 alias tw='yarn run test:watch'
 
@@ -77,7 +76,7 @@ alias t='makeOrYarn "test" "test"'
 alias ti='makeOrYarn "integration" "test:integration"'
 
 # Docker
-alias dc=docker-compose
+alias dc='docker-compose'
 alias stopconts='docker ps -aq | xargs -n 1 docker stop -t 0'
 alias delconts='docker ps -aq | xargs -n 1 docker rm -v'
 alias die='stopconts; delconts'
@@ -106,36 +105,14 @@ SPACESHIP_PROMPT_ORDER=(
 # TOOL SETUP #
 ##############
 
+# fnm
+eval "$(fnm env --multi)"
+
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 
 # Autojump, https://github.com/wting/autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-# Docker-based Golang development
-# TODO: iterate on this
-alias god='docker run --net=party -p 8080:80 --rm=true -it -v `pwd`:/go/src/app -w /go/src/app golang go "$@"'
-function gvt() {
-  echo "== gvt" "$@" "=="
-  if [ $1 == "fetch" ]; then
-    BASE="vendor/"
-    if [ -d "$BASE$2" ]; then
-      return
-    fi
-  fi
-  docker run --dns=8.8.8.8 \
-             --dns=8.8.4.4 \
-             --rm=true -i \
-             -v $(pwd):/go/src \
-             justincormack/gvt "$@"
-}
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bjorn/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bjorn/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/bjorn/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bjorn/google-cloud-sdk/completion.zsh.inc'; fi
