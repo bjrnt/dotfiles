@@ -3,3 +3,4 @@ robbyrussell/oh-my-zsh folder:plugins/autojump
 zsh-users/zsh-syntax-highlighting
 mafredri/zsh-async
 denysdovhan/spaceship-prompt
+djui/alias-tips

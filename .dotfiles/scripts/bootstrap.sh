@@ -11,6 +11,6 @@ brew tap | grep -q 'getantibody/tap' || brew tap getantibody/tap
 brew install antibody
 
 # Setup antibody
-antibody bundle < "~/.zsh_plugins.txt" > ~/.zsh_plugins.sh
+antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 antibody update
 

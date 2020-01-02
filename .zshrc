@@ -53,15 +53,15 @@ source ~/.zsh_plugins.sh
 # Command replacements
 alias cat='bat'
 alias top='sudo htop'
+alias vim='nvim'
 
 # Add config git alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias updateconfig='config add -u; config c -m"Update Dotfiles"'
+alias updateconfig='config add -u; config c -m"Update Dotfiles"; config push'
 
 # General 
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias c='clear'
-alias vim='nvim'
 alias lg='lazygit'
 alias dns='sudo killall -HUP mDNSResponder; sudo killall mDNSResponderHelper; sudo dscacheutil -flushcache'
 
