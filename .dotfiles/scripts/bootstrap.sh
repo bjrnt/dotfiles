@@ -4,6 +4,8 @@
 brew install zsh
 brew install nvim
 brew install Schniz/tap/fnm
+brew install bat
+brew install htop
 
 brew tap | grep -q 'getantibody/tap' || brew tap getantibody/tap
 brew install antibody

@@ -50,10 +50,16 @@ source ~/.zsh_plugins.sh
 # ALIASES #
 ###########
 
+# Command replacements
+alias cat='bat'
+alias top='sudo htop'
+
 # Add config git alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias updateconfig='config add -u; config c -m"Update Dotfiles"'
 
 # General 
+alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias c='clear'
 alias vim='nvim'
 alias lg='lazygit'
@@ -110,6 +116,8 @@ eval "$(fnm env --multi)"
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# add support for ctrl+o to open selected file in VS Code
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 # Autojump, https://github.com/wting/autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
