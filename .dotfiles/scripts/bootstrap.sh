@@ -8,9 +8,9 @@ brew install nvim
 brew install Schniz/tap/fnm
 brew install bat
 brew install htop
+brew install Schniz/tap/fnm
 
-brew tap | grep -q 'getantibody/tap' || brew tap getantibody/tap
-brew install antibody
+brew install getantibody/tap/antibody
 
 # Setup antibody
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
