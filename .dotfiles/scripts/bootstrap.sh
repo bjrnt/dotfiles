@@ -8,7 +8,9 @@ brew install nvim
 brew install Schniz/tap/fnm
 brew install bat
 brew install htop
-brew install Schniz/tap/fnm
+brew install fzf
+brew install yqrashawn/goku/goku
+brew install autojump
 
 brew install getantibody/tap/antibody
 
