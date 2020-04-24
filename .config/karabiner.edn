@@ -68,14 +68,12 @@
          :rules [:launch-mode
                  [:a [:km "open: applications"]]
                  [:b [:km "open: bear"]]
-                 [:c [:km "open: chrome"]]
+                 [:c [:km "open: safari"]]
                  [:d [:km "open: recent downloads"]]
-                 [:e [:km "open: paw"]]
                  [:k [:km "open: kakaotalk"]]
                  [:l [:km "open: fantastical"]]
                  [:m [:km "open: spotify"]]
                  [:s [:km "open: spark"]]
                  [:t [:km "open: terminal"]]
                  [:v [:km "open: vscode"]]
-                 [:w [:km "open: things"]]
-                 [:q [:km "open: slack"]]]}]}
+                 [:w [:km "open: things"]]]}]}

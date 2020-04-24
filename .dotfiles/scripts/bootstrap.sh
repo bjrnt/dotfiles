@@ -18,3 +18,7 @@ brew install getantibody/tap/antibody
 antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
 antibody update
 
+# Setup VimPlug
+pip3 install --user neovim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
