@@ -86,6 +86,7 @@ alias dc='docker-compose'
 alias stopconts='docker ps -aq | xargs -n 1 docker stop -t 0'
 alias delconts='docker ps -aq | xargs -n 1 docker rm -v'
 alias die='stopconts; delconts'
+alias psql='/Applications/Postgres.app/Contents/Versions/12/bin/psql'
 
 # Git
 pr() {

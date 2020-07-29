@@ -701,7 +701,7 @@
             "key_code" : "c"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: safari\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: firefox\"'"
           } ],
           "conditions" : [ {
             "name" : "launch-mode",

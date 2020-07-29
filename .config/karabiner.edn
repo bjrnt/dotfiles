@@ -68,7 +68,7 @@
          :rules [:launch-mode
                  [:a [:km "open: applications"]]
                  [:b [:km "open: bear"]]
-                 [:c [:km "open: safari"]]
+                 [:c [:km "open: firefox"]]
                  [:d [:km "open: recent downloads"]]
                  [:k [:km "open: kakaotalk"]]
                  [:l [:km "open: fantastical"]]
