@@ -1,7 +1,6 @@
 [user]
 	name = Björn Tegelund
 	email = b.tegelund@gmail.com
-	signingKey = 1D18D575ADAAD50BEF78B511CC68A8A0FE9EA5B7
 [core]
 	editor = code --wait
 [filter "lfs"]
@@ -22,7 +21,6 @@
 	co = checkout
 	com = checkout master
 	cod = checkout develop 
-	new = checkout -b
 	rh = reset --hard
 	b = branch
   # Lists branches by most recently commmited to
@@ -31,10 +29,6 @@
 	la = !git config -l | grep alias | cut -c 7-
   # Remove local branches that have been merged into master of develop
   cleanup = !git branch --merged | egrep -v \"(^\\*|master|develop)\" | xargs git branch -d
-[commit]
-	gpgsign = false 
-[gpg]
-	program = gpg
 [diff]
 	tool = code
 [difftool]
