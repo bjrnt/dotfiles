@@ -81,7 +81,7 @@ SPACESHIP_PROMPT_ORDER=(
 ##############
 
 # fnm
-if ! type "fnm" > /dev/null; then
+if command -v fnm &> /dev/null; then
   eval "$(fnm env --multi)"
 fi
 
