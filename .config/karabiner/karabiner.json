@@ -701,7 +701,7 @@
             "key_code" : "c"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: firefox\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: browser\"'"
           } ],
           "conditions" : [ {
             "name" : "launch-mode",
@@ -766,7 +766,7 @@
             "key_code" : "s"
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: spark\"'"
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: email\"'"
           } ],
           "conditions" : [ {
             "name" : "launch-mode",

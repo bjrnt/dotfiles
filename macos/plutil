@@ -1,0 +1,30 @@
+[?1049h[22;0;0t[?1h=[H[2J]11;?[?2004h[?25h[?25l(B[m[H[2J]112[1 q]112[1 q[38:2:217:215:206m[48:2:33:39:51m[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[J[H[?25h[?25l[22B(B[m[38:2:217:215:206m[48:2:255:51:51m[LC] LanguageClient: binary (/Users/bjorn/.config/nvim/plugged/LanguageC...ovim/
+bin/languageclient) doesn't exists! Please check installation guide.(B[m[38:2:217:215:206m[48:2:33:39:51m[K]112[2 q[?25h[?25l[20;24r[20;1H[3M[r[19;1H(B[0;1;7m[38:2:217:215:206m[48:2:33:39:51m                                                                                
+
+
+(B[m[38:2:255:255:255m[48:2:255:0:0mError detected while processing command line:(B[m[38:2:217:215:206m[48:2:33:39:51m[K
+(B[m[38:2:255:255:255m[48:2:255:0:0mE492: Not an editor command: onvert(B[m[38:2:217:215:206m[48:2:33:39:51m[K
+(B[0;1m[38:2:0:128:0m[48:2:33:39:51mPress ENTER or type command to continue(B[m[38:2:217:215:206m[48:2:33:39:51m[K[?25h
