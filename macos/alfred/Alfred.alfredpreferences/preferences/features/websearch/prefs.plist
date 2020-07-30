@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>095EF51D-9107-4200-902B-2B62F62BE653</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ko</string>
+			<key>text</key>
+			<string>Naver Dictionary</string>
+			<key>url</key>
+			<string>https://en.dict.naver.com/#/search?query={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E730C8CA-33F0-4AD6-81BC-4A4C10FC6357</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>naver</string>
+			<key>text</key>
+			<string>Search Naver for '{query}'</string>
+			<key>url</key>
+			<string>https://search.naver.com/search.naver?query={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

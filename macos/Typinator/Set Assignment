@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key></key>
+	<array>
+		<string>gue-Quadro-19392287620</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59825060300</string>
+		<string>bjorn@Bjorn’s MacBook Pro(C02W63DYHV2L)-58194730927</string>
+		<string>gue-gMac-40621071663</string>
+	</array>
+	<key>Bear.app</key>
+	<array>
+		<string>gue-Quadro-19392287620</string>
+		<string>bjorn@Bjorn’s MacBook Pro(C02W63DYHV2L)-59331121885</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59825060300</string>
+		<string>bjorn@Bjorn’s MacBook Pro(C02W63DYHV2L)-58194730927</string>
+		<string>gue-gMac-40621071663</string>
+	</array>
+	<key>Fantastical 2.app</key>
+	<array>
+		<string>gue-Quadro-19392287620</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59825060300</string>
+		<string>bjorn@Bjorn’s MacBook Pro(C02W63DYHV2L)-58194730927</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59523960157</string>
+		<string>gue-gMac-40621071663</string>
+	</array>
+	<key>IntelliJ IDEA CE.app</key>
+	<array>
+		<string>gue-Quadro-19392287620</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59825060300</string>
+	</array>
+	<key>Things3.app</key>
+	<array>
+		<string>gue-Quadro-19392287620</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59825060300</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59547802142</string>
+		<string>bjorn@Bjorn’s MacBook Pro(C02W63DYHV2L)-58194730927</string>
+		<string>gue-gMac-40621071663</string>
+	</array>
+	<key>Visual Studio Code.app</key>
+	<array>
+		<string>gue-Quadro-19392287620</string>
+		<string>bjorn@Bjorn’s MacBook Pro(C02W63DYHV2L)-59331121885</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59825060300</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59547802142</string>
+		<string>bjorn@Bjorn’s MacBook Pro(C02W63DYHV2L)-58194730927</string>
+		<string>bjorn@Bjorn’s Work MacBook(C02X851YJGH6)-59523960157</string>
+	</array>
+</dict>
+</plist>
