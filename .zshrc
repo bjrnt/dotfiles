@@ -12,7 +12,7 @@ export PATH="/usr/local/go/bin/:$GOPATH/bin:$PATH"
 # GLOBAL OPTIONS #
 ##################
 
-export EDITOR=code
+export EDITOR=nvim
 export DISABLE_AUTO_UPDATE=true
 export LC_ALL=en_US
 
