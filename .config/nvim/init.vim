@@ -12,11 +12,6 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-if executable('rustc')
-	Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-	Plug 'racer-rust/vim-racer', { 'for': 'rust' }
-endif
-
 call plug#end()
 
 " behavior
@@ -50,22 +45,6 @@ set relativenumber
 
 " show title
 set title
-
-" Racer
-set hidden
-let g:racer_cmd = "/home/ubuntu/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-let g:autofmt_autosave = 1
-au FileType rust nmap <leader>rx <Plug>(rust-doc)
-au FileType rust nmap <leader>rd <Plug>(rust-def)
-au FileType rust nmap <leader>rs <Plug>(rust-def-split)
-
-" Rust
-" << LSP >> {{{
-let g:LanguageClient_autoStart = 1
-let g:LanguageClient_serverCommands = {
-  \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls']
-  \ }
 
 nnoremap <silent> H :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> Z :call LanguageClient#textDocument_definition()<CR>
