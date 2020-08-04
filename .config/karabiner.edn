@@ -1,9 +1,9 @@
 ; Not sure exaclty how these delays are used, need to look into it more
 {:profiles {:Default {:default true
-                      :sim 50
+                      :sim 80
                       :delay 80
                       :alone 120
-                      :held 70}}
+                      :held 80}}
 
  :layers {:hyper-mode {:key :caps_lock :alone {:key :escape}}
           :launch-mode {:key :tab}}
