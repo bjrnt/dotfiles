@@ -1,0 +1,916 @@
+{
+  "global" : {
+    "check_for_updates_on_startup" : true,
+    "show_in_menu_bar" : true,
+    "show_profile_name_in_menu_bar" : false
+  },
+  "profiles" : [ {
+    "complex_modifications" : {
+      "parameters" : {
+        "basic.simultaneous_threshold_milliseconds" : 50,
+        "basic.to_delayed_action_delay_milliseconds" : 80,
+        "basic.to_if_alone_timeout_milliseconds" : 120,
+        "basic.to_if_held_down_threshold_milliseconds" : 70
+      },
+      "rules" : [ {
+        "description" : "Auto generated layer conditions",
+        "manipulators" : [ {
+          "type" : "basic",
+          "to" : [ {
+            "set_variable" : {
+              "name" : "hyper-mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
+            "key_code" : "caps_lock"
+          },
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "hyper-mode",
+              "value" : 0
+            }
+          } ],
+          "to_if_alone" : [ {
+            "key_code" : "escape"
+          } ]
+        }, {
+          "type" : "basic",
+          "to" : [ {
+            "set_variable" : {
+              "name" : "launch-mode",
+              "value" : 1
+            }
+          } ],
+          "from" : {
+            "key_code" : "tab"
+          },
+          "to_after_key_up" : [ {
+            "set_variable" : {
+              "name" : "launch-mode",
+              "value" : 0
+            }
+          } ],
+          "to_if_alone" : [ {
+            "key_code" : "tab"
+          } ]
+        } ]
+      }, {
+        "description" : "Hyper Mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "open_bracket"
+          },
+          "to" : [ {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "close_bracket"
+          },
+          "to" : [ {
+            "key_code" : "close_bracket",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "semicolon"
+          },
+          "to" : [ {
+            "key_code" : "semicolon",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "quote"
+          },
+          "to" : [ {
+            "key_code" : "quote",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "comma"
+          },
+          "to" : [ {
+            "key_code" : "comma",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "period"
+          },
+          "to" : [ {
+            "key_code" : "period",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "slash"
+          },
+          "to" : [ {
+            "key_code" : "slash",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "key_code" : "a",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "key_code" : "page_down"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "e"
+          },
+          "to" : [ {
+            "key_code" : "e",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "f"
+          },
+          "to" : [ {
+            "key_code" : "f",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "g"
+          },
+          "to" : [ {
+            "key_code" : "g",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h"
+          },
+          "to" : [ {
+            "key_code" : "left_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "i"
+          },
+          "to" : [ {
+            "key_code" : "i",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "j"
+          },
+          "to" : [ {
+            "key_code" : "down_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "key_code" : "up_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "key_code" : "right_arrow"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "key_code" : "m",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "n"
+          },
+          "to" : [ {
+            "key_code" : "n",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "o"
+          },
+          "to" : [ {
+            "key_code" : "o",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "p"
+          },
+          "to" : [ {
+            "key_code" : "p",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "q"
+          },
+          "to" : [ {
+            "key_code" : "q",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "r"
+          },
+          "to" : [ {
+            "key_code" : "r",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "key_code" : "s",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "u"
+          },
+          "to" : [ {
+            "key_code" : "page_up"
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v"
+          },
+          "to" : [ {
+            "key_code" : "v",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "key_code" : "right_arrow",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "x"
+          },
+          "to" : [ {
+            "key_code" : "x",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "y"
+          },
+          "to" : [ {
+            "key_code" : "y",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "z"
+          },
+          "to" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "1"
+          },
+          "to" : [ {
+            "key_code" : "1",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2"
+          },
+          "to" : [ {
+            "key_code" : "2",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3"
+          },
+          "to" : [ {
+            "key_code" : "3",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4"
+          },
+          "to" : [ {
+            "key_code" : "4",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5"
+          },
+          "to" : [ {
+            "key_code" : "5",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6"
+          },
+          "to" : [ {
+            "key_code" : "6",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7"
+          },
+          "to" : [ {
+            "key_code" : "7",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8"
+          },
+          "to" : [ {
+            "key_code" : "8",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9"
+          },
+          "to" : [ {
+            "key_code" : "9",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "0"
+          },
+          "to" : [ {
+            "key_code" : "0",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "name" : "hyper-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right-command to switch input source when alone",
+        "manipulators" : [ {
+          "to_if_alone" : [ {
+            "key_code" : "f19"
+          } ],
+          "from" : {
+            "key_code" : "right_command"
+          },
+          "to" : [ {
+            "key_code" : "right_command"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Launch mode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "a"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: applications\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "b"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: bear\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "c"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: browser\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "d"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: recent downloads\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "k"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: kakaotalk\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: fantastical\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "m"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: spotify\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "s"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: email\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "t"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: terminal\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "v"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: vscode\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "w"
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"open: things\"'"
+          } ],
+          "conditions" : [ {
+            "name" : "launch-mode",
+            "value" : 1,
+            "type" : "variable_if"
+          } ],
+          "type" : "basic"
+        } ]
+      } ]
+    },
+    "devices" : [ ],
+    "fn_function_keys" : [ {
+      "from" : {
+        "key_code" : "f1"
+      },
+      "to" : {
+        "consumer_key_code" : "display_brightness_decrement"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f2"
+      },
+      "to" : {
+        "consumer_key_code" : "display_brightness_increment"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f3"
+      },
+      "to" : {
+        "key_code" : "mission_control"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f4"
+      },
+      "to" : {
+        "key_code" : "launchpad"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f5"
+      },
+      "to" : {
+        "key_code" : "illumination_decrement"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f6"
+      },
+      "to" : {
+        "key_code" : "illumination_increment"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f7"
+      },
+      "to" : {
+        "consumer_key_code" : "rewind"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f8"
+      },
+      "to" : {
+        "consumer_key_code" : "play_or_pause"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f9"
+      },
+      "to" : {
+        "consumer_key_code" : "fastforward"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f10"
+      },
+      "to" : {
+        "consumer_key_code" : "mute"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f11"
+      },
+      "to" : {
+        "consumer_key_code" : "volume_decrement"
+      }
+    }, {
+      "from" : {
+        "key_code" : "f12"
+      },
+      "to" : {
+        "consumer_key_code" : "volume_increment"
+      }
+    } ],
+    "name" : "Default",
+    "parameters" : {
+      "delay_milliseconds_before_open_device" : 1000
+    },
+    "selected" : true,
+    "simple_modifications" : [ ],
+    "virtual_hid_keyboard" : {
+      "country_code" : 0,
+      "mouse_key_xy_scale" : 100
+    }
+  } ]
+}
