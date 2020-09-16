@@ -85,7 +85,7 @@ if command -v fnm &> /dev/null; then
 fi
 
 # FZF
-export FZF_DEFAULT_COMMAND="fd --type file . $HOME"
+export FZF_DEFAULT_COMMAND="fd -H --type file . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type directory . $HOME"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
