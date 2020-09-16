@@ -9,6 +9,7 @@ brew install Schniz/tap/fnm
 brew install bat
 brew install htop
 brew install fzf
+brew install fd
 brew install yqrashawn/goku/goku
 brew install autojump
 

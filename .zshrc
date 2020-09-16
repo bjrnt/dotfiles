@@ -35,8 +35,6 @@ else
 	compinit -C
 fi
 
-ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
-
 ###########
 # PLUGINS #
 ###########
@@ -52,6 +50,7 @@ source ~/.zsh_plugins.sh
 alias cat='bat'
 alias top='sudo htop'
 alias vim='nvim'
+alias fd="fd -H" # Show hidden files
 
 # Add config git alias
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -86,10 +85,18 @@ if command -v fnm &> /dev/null; then
 fi
 
 # FZF
+export FZF_DEFAULT_COMMAND="fd --type file . $HOME"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type directory . $HOME"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # add support for ctrl+o to open selected file in VS Code
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 # Autojump, https://github.com/wting/autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+
+function pfwd () {
+  ssh -N -L "${2}:localhost:${2}" $1
+}
 
