@@ -57,7 +57,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias updateconfig='config add -u; config c -m"Update Dotfiles"; config push'
 
 # General 
-alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias preview="fd --type file . | fzf --preview 'bat --color \"always\" {}'"
 alias c='clear'
 alias lg='lazygit'
 
