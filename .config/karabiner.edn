@@ -12,8 +12,8 @@
 
  :templates {;; e.g. [:t [:alfred "search tty sessions" "net.isometry.alfred.tty"]]
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
-             ;; e.g. [:r [:km "edit: Web Searches"]]
-             :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"}
+             :open "open \"%s\""
+             :launch "open -a \"%s\""}
  ; the default value is 250
  :simlayer-threshold 50
  :main [{:des "Hyper Mode"
@@ -67,17 +67,18 @@
 
         {:des "Launch mode"
          :rules [:launch-mode
-                 [:a [:km "open: applications"]]
-                 [:b [:km "open: bear"]]
-                 [:c [:km "open: browser"]]
-                 [:d [:km "open: recent downloads"]]
-                 [:k [:km "open: kakaotalk"]]
-                 [:l [:km "open: fantastical"]]
-                 [:m [:km "open: spotify"]]
-                 [:s [:km "open: email"]]
-                 [:t [:km "open: terminal"]]
-                 [:v [:km "open: vscode"]]
-                 [:w [:km "open: things"]]]}
+                 [:b [:launch "Bear"]]
+                 [:c [:launch "Firefox Developer Edition"]]
+                 [:d [:open "/Users/bjrnt/Downloads"]]
+                 [:k [:launch "KakaoTalk"]]
+                 [:l [:launch "Fantastical"]]
+                 [:m [:launch "Spotify"]]
+                 [:s [:launch "Spark"]]
+                 [:t [:launch "iTerm"]]
+                 [:v [:launch "Visual Studio Code"]]
+                 [:w [:launch "Things3"]]
+                 [:o [:launch "Obsidian"]]
+                 ]}
 
         {:des "CTRL Mode"
          :rules [:c-mode
