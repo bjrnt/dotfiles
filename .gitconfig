@@ -16,7 +16,7 @@
 	ca = commit --amend --no-edit
 	ds = diff --staged
 	s = status --short --branch
-  c = commit
+        c = commit
 	a = add
 	co = checkout
 	com = checkout master
