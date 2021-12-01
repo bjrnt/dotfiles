@@ -1,6 +1,6 @@
 ; Not sure exaclty how these delays are used, need to look into it more
 {:profiles {:Default {:default true
-                      :sim 50
+                      :sim 80
                       :delay 80
                       :alone 120
                       :held 80}}
@@ -10,16 +10,19 @@
  :simlayers {:c-mode {:key :c :alone {:key :c}}
             }
 
- :templates {;; e.g. [:t [:alfred "search tty sessions" "net.isometry.alfred.tty"]]
+ :templates {
+             :launch "open -a \"%s\""
+             :open "open \"%s\""
+             :osascript "osascript -e '%s'"
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
+             :ascript "osascript -e '%s'"
              ;; e.g. [:r [:km "edit: Web Searches"]]
              :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"}
  ; the default value is 250
  :simlayer-threshold 50
  :main [{:des "Hyper Mode"
          :rules [:hyper-mode
-                 [:open_bracket :!!open_bracket]
-                 [:close_bracket :!!close_bracket]
+                 [:open_bracket :!!open_bracket] [:close_bracket :!!close_bracket]
                  [:semicolon :!!semicolon]
                  [:quote :!!quote]
                  [:comma :!!comma]
@@ -38,9 +41,9 @@
                  [:k :up_arrow] ;; Navigation
                  [:l :right_arrow] ;; Navigation 
                  [:m :!!m]
-                 [:n :!!n]
+                 [:n [:osascript "tell application \"Spotify\" to next track"]]
                  [:o :!!o]
-                 [:p :!!p]
+                 [:p :!CTS4] ;; Screenshot section to clipboard
                  [:q :!!q]
                  [:r :!!r]
                  [:s :!!s]
@@ -67,17 +70,18 @@
 
         {:des "Launch mode"
          :rules [:launch-mode
-                 [:a [:km "open: applications"]]
-                 [:b [:km "open: bear"]]
-                 [:c [:km "open: browser"]]
-                 [:d [:km "open: recent downloads"]]
-                 [:k [:km "open: kakaotalk"]]
-                 [:l [:km "open: fantastical"]]
-                 [:m [:km "open: spotify"]]
-                 [:s [:km "open: email"]]
-                 [:t [:km "open: terminal"]]
-                 [:v [:km "open: vscode"]]
-                 [:w [:km "open: things"]]]}
+                 [:e [:launch "Amazon Chime"]]
+                 [:w [:launch "Slack"]]
+                 [:c [:launch "Firefox"]]
+                 [:d [:open "/Users/tegelund/Downloads"]]
+                 [:j [:launch "IntelliJ IDEA"]]
+                 [:l [:ascript "tell application \"Microsoft Outlook\"\nset view of first main window to calendar view\nactivate\nend tell"]]
+                 [:s [:launch "Microsoft Outlook"]]
+                 [:t [:launch "iTerm"]]
+                 [:v [:launch "Visual Studio Code"]]
+                 [:m [:launch "Spotify"]]
+                 [:o [:launch "Obsidian"]]
+                ]}
 
         {:des "CTRL Mode"
          :rules [:c-mode
