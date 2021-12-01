@@ -16,6 +16,8 @@ export EDITOR=nvim
 export DISABLE_AUTO_UPDATE=true
 export LC_ALL=en_US
 
+set -o vi
+
 ###############
 # ZSH Options #
 ###############

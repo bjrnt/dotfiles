@@ -15,9 +15,7 @@
              :open "open \"%s\""
              :osascript "osascript -e '%s'"
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
-             :ascript "osascript -e '%s'"
-             ;; e.g. [:r [:km "edit: Web Searches"]]
-             :km "osascript -e 'tell application \"Keyboard Maestro Engine\" to do script \"%s\"'"}
+             }
  ; the default value is 250
  :simlayer-threshold 50
  :main [{:des "Hyper Mode"
@@ -75,7 +73,7 @@
                  [:c [:launch "Firefox"]]
                  [:d [:open "/Users/tegelund/Downloads"]]
                  [:j [:launch "IntelliJ IDEA"]]
-                 [:l [:ascript "tell application \"Microsoft Outlook\"\nset view of first main window to calendar view\nactivate\nend tell"]]
+                 [:l [:osascript "tell application \"Microsoft Outlook\"\nset view of first main window to calendar view\nactivate\nend tell"]]
                  [:s [:launch "Microsoft Outlook"]]
                  [:t [:launch "iTerm"]]
                  [:v [:launch "Visual Studio Code"]]

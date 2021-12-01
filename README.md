@@ -1,5 +1,7 @@
 # Dotfiles
 
+Generate and add a SSH key to Github first.
+
 ```
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 git clone --recursive -j8 --bare git@github.com:bjrnt/dotfiles.git $HOME/.cfg
