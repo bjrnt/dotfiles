@@ -12,9 +12,8 @@ export PATH="/usr/local/go/bin/:$GOPATH/bin:$PATH"
 # GLOBAL OPTIONS #
 ##################
 
-export EDITOR=nvim
+export EDITOR=code
 export DISABLE_AUTO_UPDATE=true
-export LC_ALL=en_US
 
 set -o vi
 
@@ -43,6 +42,8 @@ fi
 
 # Antibody installation https://github.com/getantibody/antibody/tree/master/docs
 source ~/.zsh_plugins.sh
+
+source ~/.custom
 
 ###########
 # ALIASES #
@@ -83,7 +84,7 @@ SPACESHIP_PROMPT_ORDER=(
 
 # fnm
 if command -v fnm &> /dev/null; then
-  eval "$(fnm env --multi)"
+  eval "$(fnm env)"
 fi
 
 # FZF
