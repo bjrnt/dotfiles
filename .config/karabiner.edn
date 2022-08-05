@@ -70,8 +70,8 @@
          :rules [:launch-mode
                  [:e [:launch "Amazon Chime"]]
                  [:w [:launch "Slack"]]
-                 [:c [:launch "Firefox"]]
-                 [:d [:open "/Users/tegelund/Downloads"]]
+                 [:c [:launch "Firefox Developer Edition"]]
+                 [:d [:open "/Users/bjorn/Downloads"]]
                  [:j [:launch "IntelliJ IDEA"]]
                  [:l [:osascript "tell application \"Microsoft Outlook\"\nset view of first main window to calendar view\nactivate\nend tell"]]
                  [:s [:launch "Microsoft Outlook"]]

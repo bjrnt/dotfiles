@@ -78,6 +78,8 @@ defaults write org.m0k.transmission AutoSize -bool true
 echo "  › Hide the legal disclaimer"
 defaults write org.m0k.transmission WarningLegal -bool false
 
+echo "  › Remove all default apps from the dock"
+defaults write com.apple.dock persistent-apps -array
 
 echo "› Kill related apps"
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
