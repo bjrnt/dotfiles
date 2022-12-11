@@ -88,8 +88,10 @@ if command -v fnm &> /dev/null; then
 fi
 
 # FZF
-export FZF_DEFAULT_COMMAND="fd -H --type file . $HOME"
+export FZF_DEFAULT_COMMAND="fd --type file . $HOME"
+# Paste the selected files and directories onto the command-line
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# cd into the selected directory
 export FZF_ALT_C_COMMAND="fd --type directory . $HOME"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # add support for ctrl+o to open selected file in VS Code
@@ -103,3 +105,7 @@ function pfwd () {
   ssh -N -L "${2}:localhost:${2}" $1
 }
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
