@@ -1,12 +1,13 @@
 ; Not sure exaclty how these delays are used, need to look into it more
 {:profiles {:Default {:default true
-                      :sim 80
+                      :sim 50
                       :delay 80
-                      :alone 120
-                      :held 80}}
+                      :alone 200
+                      :held 200}}
 
- :layers {:hyper-mode {:key :caps_lock :alone {:key :escape}}
+ :layers {:hyper-mode {:key :escape :alone {:key :escape} :held {:key :escape}} 
           :launch-mode {:key :tab}}
+
  :simlayers {:c-mode {:key :c :alone {:key :c}}
             }
 
@@ -69,7 +70,7 @@
         {:des "Launch mode"
          :rules [:launch-mode
                  [:e [:launch "Amazon Chime"]]
-                 [:w [:launch "Slack"]]
+                 [:w [:launch "Things3"]]
                  [:c [:launch "Firefox Developer Edition"]]
                  [:d [:open "/Users/bjorn/Downloads"]]
                  [:j [:launch "IntelliJ IDEA"]]
@@ -79,10 +80,5 @@
                  [:v [:launch "Visual Studio Code"]]
                  [:m [:launch "Spotify"]]
                  [:o [:launch "Obsidian"]]
-                ]}
-
-        {:des "CTRL Mode"
-         :rules [:c-mode
-                 [:x :!Tx]
                 ]}
         ]}
