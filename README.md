@@ -74,3 +74,4 @@ sh ./macos/defaults.sh
 - [ ] Things 3
 - [ ] Spotify
 - [ ] Fantastical
+- [ ] Obsidian
