@@ -1,15 +1,15 @@
 ; Not sure exaclty how these delays are used, need to look into it more
 {:profiles {:Default {:default true
                       :sim 50
-                      :delay 80
+                      :delay 0
                       :alone 200
-                      :held 200}}
+                      :held 210}}
 
- :layers {:hyper-mode {:key :escape :alone {:key :escape} :held {:key :escape}} 
-          :launch-mode {:key :tab}}
-
- :simlayers {:c-mode {:key :c :alone {:key :c}}
-            }
+ :simlayers {
+      :hyper-mode-c {:key :caps_lock :alone {:key :escape} :held {:key :escape}}
+      :hyper-mode {:key :escape}
+      :launch-mode {:key :w}
+ }
 
  :templates {
              :launch "open -a \"%s\""
@@ -18,9 +18,53 @@
              :alfred "osascript -e 'tell application \"Alfred 4\" to run trigger \"%s\" in workflow \"%s\" with argument \"%s\"'"
              }
  ; the default value is 250
- :simlayer-threshold 50
  :main [{:des "Hyper Mode"
          :rules [:hyper-mode
+                 [:open_bracket :!!open_bracket] [:close_bracket :!!close_bracket]
+                 [:semicolon :!!semicolon]
+                 [:quote :!!quote]
+                 [:comma :!!comma]
+                 [:period :!!period]
+                 [:slash :!!slash]
+                 [:a :!!a]
+                 [:b :!Oleft_arrow] ;; Navigation
+                 [:c :!!c]
+                 [:d :page_down] ;; Navigation
+                 [:e :!!e]
+                 [:f :!!f]
+                 [:g :!!g]
+                 [:h :left_arrow] ;; Navigation 
+                 [:i :!!i]
+                 [:j :down_arrow] ;; Navigation 
+                 [:k :up_arrow] ;; Navigation
+                 [:l :right_arrow] ;; Navigation 
+                 [:m :!!m]
+                 [:n [:osascript "tell application \"Spotify\" to next track"]]
+                 [:o :!!o]
+                 [:p :!CTS4] ;; Screenshot section to clipboard
+                 [:q :!!q]
+                 [:r :!!r]
+                 [:s :!!s]
+                 [:t :!!t]
+                 [:u :page_up] ;; Navigation
+                 [:v :!!v]
+                 [:w :!Oright_arrow] ;; Navigation
+                 [:x :!!x] ;; OSX Global Lock
+                 [:y :!!y]
+                 [:z :!!z]
+                 [:1 :!!1]
+                 [:2 :!!2]
+                 [:3 :!!3]
+                 [:4 :!!4]
+                 [:5 :!!5]
+                 [:6 :!!6]
+                 [:7 :!!7]
+                 [:8 :!!8]
+                 [:9 :!!9]
+                 [:0 :!!0]]}
+
+        {:des "Hyper Mode Caps"
+         :rules [:hyper-mode-c
                  [:open_bracket :!!open_bracket] [:close_bracket :!!close_bracket]
                  [:semicolon :!!semicolon]
                  [:quote :!!quote]
@@ -69,16 +113,13 @@
 
         {:des "Launch mode"
          :rules [:launch-mode
-                 [:e [:launch "Amazon Chime"]]
-                 [:w [:launch "Things3"]]
-                 [:c [:launch "Firefox Developer Edition"]]
-                 [:d [:open "/Users/bjorn/Downloads"]]
-                 [:j [:launch "IntelliJ IDEA"]]
-                 [:l [:osascript "tell application \"Microsoft Outlook\"\nset view of first main window to calendar view\nactivate\nend tell"]]
-                 [:s [:launch "Microsoft Outlook"]]
-                 [:t [:launch "iTerm"]]
-                 [:v [:launch "Visual Studio Code"]]
+                 [:e [:launch "Firefox Developer Edition"]]
+                 [:d [:launch "Things3"]]
+                 [:a [:open "/Users/bjorn/Downloads"]]
+                 [:f [:launch "Warp"]]
+                 [:l [:launch "Fantastical"]]
+                 [:r [:launch "Visual Studio Code"]]
                  [:m [:launch "Spotify"]]
-                 [:o [:launch "Obsidian"]]
+                 [:p [:launch "Obsidian"]]
                 ]}
         ]}
