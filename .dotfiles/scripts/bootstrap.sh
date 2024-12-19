@@ -14,6 +14,7 @@ brew install yqrashawn/goku/goku
 brew install autojump
 brew install lazygit
 brew install tmux
+brew install --cask nikitabobko/tap/aerospace
 
 brew install antibody
 
